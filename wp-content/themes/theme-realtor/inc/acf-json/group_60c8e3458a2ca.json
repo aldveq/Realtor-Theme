@@ -1,0 +1,219 @@
+{
+    "key": "group_60c8e3458a2ca",
+    "title": "Legal Settings",
+    "fields": [
+        {
+            "key": "field_60c8e35a6e9d7",
+            "label": "Is Legal Settings Available?",
+            "name": "legal_settings_is_legal_settings_available",
+            "type": "button_group",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "yes": "Yes",
+                "no": "No"
+            },
+            "allow_null": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_60c8e3cba2a8d",
+            "label": "Badges",
+            "name": "contact_information_settings_badges_reapeter",
+            "type": "repeater",
+            "instructions": "(Optional)",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60c8e35a6e9d7",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add badge",
+            "sub_fields": [
+                {
+                    "key": "field_60c8e3e4a2a8e",
+                    "label": "Image",
+                    "name": "contact_information_settings_badges_reapeter_image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_60c8e3f9a2a8f",
+                    "label": "Is link available?",
+                    "name": "contact_information_settings_badges_reapeter_is_link_available",
+                    "type": "button_group",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "yes": "Yes",
+                        "no": "No"
+                    },
+                    "allow_null": 0,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value"
+                },
+                {
+                    "key": "field_60c8e434a2a90",
+                    "label": "Link",
+                    "name": "contact_information_settings_badges_reapeter_link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_60c8e3f9a2a8f",
+                                "operator": "==",
+                                "value": "yes"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                }
+            ]
+        },
+        {
+            "key": "field_60c8e46ca2a91",
+            "label": "Licenses",
+            "name": "contact_information_settings_licenses_reapeter",
+            "type": "repeater",
+            "instructions": "(Optional)",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60c8e35a6e9d7",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add license",
+            "sub_fields": [
+                {
+                    "key": "field_60c8e484a2a92",
+                    "label": "Text",
+                    "name": "contact_information_settings_licenses_reapeter_text",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                }
+            ]
+        },
+        {
+            "key": "field_60c8e4b6a2a93",
+            "label": "Disclaimer Text",
+            "name": "contact_information_settings_disclaimer_text",
+            "type": "wysiwyg",
+            "instructions": "(Optional)",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60c8e35a6e9d7",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "legal-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1626220331
+}

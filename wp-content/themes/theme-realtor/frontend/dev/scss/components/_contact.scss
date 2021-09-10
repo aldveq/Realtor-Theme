@@ -1,0 +1,122 @@
+.contact-container {
+    padding: 48px 0;
+    @media screen and (min-width: 992px) {
+        display: flex;
+        width: 92%;
+        margin: 0 auto;
+    }
+    @media screen and (min-width: 1400px) {
+        max-width: 1380px;
+    }
+    @media screen and (min-width: 1920px) {
+        max-width: 1540px;
+    }
+    &__main-title {
+        font-family: Raleway-Light;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 41px;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: -1.5px;
+        color: $primary-color-imperial-primer;
+        margin-top: 0;
+    }
+    &__contact-info-container {
+        width: 92%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @media screen and (min-width: 992px) {
+            width: 35%;
+            margin: 0;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding-right: 20px;
+        }
+        @media screen and (min-width: 1200px) {
+            width: 30%;
+        }
+    }
+    &__phone-container,
+    &__email-container,
+    &__address-container,
+    &__hours-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 32px;
+        @media screen and (min-width: 992px) {
+            align-items: flex-start;
+        }
+    }
+    &__phone-label,
+    &__email-label,
+    &__address-label,
+    &__hours-label {
+        font-family: Lato-Bold;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 130%;
+        letter-spacing: 0.15px;
+        color: $primary-color-imperial-primer;
+        margin-bottom: 10px;
+    }
+    &__phone-button,
+    &__email-button {
+        font-family: Lato-Bold;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 140%;
+        letter-spacing: 0.25px;
+        color: $primary-color-pico-pink;
+        text-align: center;
+        text-transform: lowercase;
+        display: table;
+        width: auto;
+        margin: 0 auto;
+        padding: 0.7em 1em;
+        @media screen and (min-width: 992px) {
+            margin: 0 auto 0 0;
+        }
+    }
+    &__address-text,
+    &__hours-text {
+        font-family: Lato-Regular;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 175%;
+        text-align: center;
+        letter-spacing: 0.5px;
+        color: $support-color-asbestos;
+        @media screen and (min-width: 992px) {
+            text-align: left;
+        }
+    }
+    &__map-container {
+        width: 100%;
+        @media screen and (min-width: 992px) {
+            width: 65%;
+        }
+        @media screen and (min-width: 1200px) {
+            width: 70%;
+        }
+    }
+    &__map {
+        width: 100%;
+        height: 600px;
+        @media screen and (min-width: 992px) {
+            height: 530px;
+        }
+        @media screen and (min-width: 1366px) {
+            height: 480px;
+        }
+    }
+}

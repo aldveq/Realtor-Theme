@@ -1,0 +1,386 @@
+.olly-olly-realtor-theme-header {
+    width: 100%;
+    padding: 7px 0;
+    background-color: $support-color-light-blue-ballerina;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5000;
+    transition: all ease-in-out 0.3s;
+    &.fixed {
+        box-shadow: 0px 1px 3px rgba($black-color, 0.14);
+    }
+    @media screen and (min-width: 1366px) {
+        padding: 0;
+        background-color: $support-color-pure-white;
+    }
+    & .container {
+        display: flex;
+        flex-direction: column;
+        @media screen and (min-width: 1366px) {
+            flex-direction: row;
+        }
+    }
+    &__logo-container,
+    &__nav-container {
+        width: 100%;
+    }
+    &__logo-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media screen and (min-width: 1366px) {
+            width: 20%;
+        }
+    }
+    &__logo-container-legal {
+        @media screen and (min-width: 1366px) {
+            width: 25%;
+        }
+        @media screen and (min-width: 1400px) {
+            width: 26%;
+        }
+    }
+    &__nav-container {
+        @media screen and (min-width: 1366px) {
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &__nav-container-legal {
+        @media screen and (min-width: 1366px) {
+            width: 75%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        @media screen and (min-width: 1400px) {
+            width: 74%;
+        }
+    }
+    &__logo-link {
+        display: none;
+        @media screen and (min-width: 1366px) {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    }
+    &__logo {
+        width: 100%;
+    }
+    &__cta-link {
+    	font-family: Raleway-Semibold;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+        letter-spacing: 0.15px;
+        text-decoration: none;
+        @media screen and (min-width: 1366px) {
+            display: none;
+        }
+        & h6 {
+            margin: 0;
+        }
+    }
+    &__cta-link--desktop {
+        display: none;
+        @media screen and (min-width: 1366px) {
+            display: block;
+            margin-left: 2rem;
+        }
+        & h6 {
+            @media screen and (min-width: 1366px) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        & span {
+            @media screen and (min-width: 1024px) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+    &__cta-number {
+        border-radius: 4px;
+        padding: 0.4em 1.4em;
+    	font-family: Lato-Bold;
+        font-weight: 700;
+        font-size: 14px;
+        margin-left: 4px;
+        @media screen and (min-width: 1024px) {
+            min-width: 148px;
+            max-width: 148px;
+            min-height: 32px;
+            max-height: 32px;
+            padding: 0.2em 1em;
+        }
+        @media screen and (min-width: 1366px) {
+            margin-top: 5px;
+            margin-left: 0;
+            line-height: 17px;
+        }
+    }
+    &__nav-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 0;
+        padding: 0;
+        height: 0; // Set to 0 for responsive menu
+        overflow: hidden;
+        transition: height ease-in-out 0.3s;
+        @media screen and (min-width: 1366px) {
+            height: 100%;   
+            flex-grow: 1;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            overflow: initial;
+        }
+        &.show {
+            padding: 10px 0;
+            min-height: 400px;
+            overflow: auto !important;
+            justify-content: flex-start !important;
+            @media screen and (min-width: 360px) {
+                min-height: 500px;
+            }
+            @media screen and (min-width: 768px) {
+                height: auto !important;
+                min-height: initial;
+                overflow: initial !important;
+                justify-content: center !important;
+            }
+        }
+        & li {
+            width: 100%;
+            display: block;
+            list-style: none;
+            font-family: Raleway-SemiBold;
+            font-weight: 600;
+            @media screen and (min-width: 1366px) {
+                width: auto;
+                height: 100%;
+                padding: 0 1rem 0 1rem;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                &:hover {
+                    background-color: $primary-color-pico-pink;
+                    & a {
+                        color: $support-color-pure-white;
+                    }
+                }
+            }
+            &:focus,
+            &:active,
+            &:visited {
+                background-color: $support-color-silver;
+            }
+            &.menu-item-has-children {
+                cursor: pointer;
+                background: {
+                    image: url(images/icons/down-arrow-black.svg);
+                    repeat: no-repeat;
+                    size: 12px 7px;
+                    position: right .75rem top 1rem;
+                };
+                @media screen and (min-width: 1366px) {
+                    background-position: right .75rem center;
+                    padding: 0 2rem 0 1rem;
+                }
+                &:hover {
+                    @media screen and (min-width: 1366px) {
+                        background-image: url(images/icons/up-arrow-white.svg);
+                        background-color: $primary-color-pico-pink;
+                        & > a {
+                            color: $support-color-pure-white !important;
+                        }
+                        & > ul.sub-menu {
+                            border-top: none;
+                            padding-bottom: 0;
+                            padding-left: 0;
+                            height: auto;
+                            overflow: initial;
+                        }
+                    }
+                }
+                & a {
+                    width: 100%; // Go back to 50% if you want to click on the LI element instead of the A element
+                    @media screen and (min-width: 1366px) {
+                        width: 100%;
+                    }
+                }
+                & ul.sub-menu a {
+                    width: 100%;
+                }
+                &.show {
+                    background-image: url(images/icons/up-arrow-black.svg);
+                    @media screen and (min-width: 1366px) {
+                        background-image: url(images/icons/up-arrow-white.svg);
+                        background-color: $primary-color-pico-pink;
+                    }
+                }
+                &.show a {
+                    @media screen and (min-width: 1366px) {
+                        color: $support-color-pure-white;
+                    }
+                }
+            }
+            &.current-menu-parent.menu-item-has-children {
+                & > a {
+                    color: $primary-color-pico-pink;
+                }
+            }
+            & ul.sub-menu {
+                margin-left: 0; 
+                padding-bottom: 0; // set to 0 for responsive dropdown
+                padding-left: 0; // set to 0 for responsive dropdown
+                height: 0; // set to 0 for responsive dropdown
+                overflow: hidden;
+                transition: height ease-in-out 0.3s;
+                border-top: 1px solid transparent;
+                @media screen and (min-width: 1366px) {
+                    border-top: none;
+                    padding-bottom: 0;
+                    padding-left: 0;
+                    height: 0;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    z-index: 1000;
+                    background-color: $support-color-pure-white;
+                    border-radius: 0 0 4px 4px;
+                    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.14);
+                    min-width: 18rem;
+                }
+                &.show {
+                    border-top: 1px solid $support-color-silver;
+                    padding-bottom: 10px;
+                    padding-left: 24px;
+                    height: auto;
+                    @media screen and (min-width: 1366px) {
+                        border-top: none;
+                        padding-bottom: 0;
+                        padding-left: 0;
+                    }
+                    & li a {
+                        color: $primary-color-imperial-primer;
+                    }
+                }
+                & li {
+                    @media screen and (min-width: 1366px) {
+                        margin: 0;
+                        padding: 0;
+                    }
+                    &:hover {
+                        @media screen and (min-width: 1366px) {
+                            background-color: $support-color-light-blue-ballerina;
+                        }
+                    }
+                    &:focus,
+                    &:active,
+                    &:visited {
+                        background-color: $support-color-silver;
+                    }
+                    &.current-menu-item {
+                        & > a {
+                            color: $primary-color-pico-pink;
+                        }
+                        @media screen and (min-width: 1366px) {
+                            background-color: $primary-color-pico-pink;
+                            & > a {
+                                color: $support-color-pure-white;
+                            }
+                        }
+                    }
+                }
+                & a {
+                    border-bottom: none;
+                    @media screen and (min-width: 1366px) {
+                        color: $primary-color-imperial-primer;
+                        padding: 0.7rem 1rem;
+                    }
+                }
+            }
+            &:last-child a {
+                padding-bottom: 0;
+                @media screen and (min-width: 1366px) {
+                    display: table;
+                    margin: auto 0;
+                    padding: 3.5rem 0;
+                }
+            }
+            &.current-menu-item {
+                & a {
+                    color: $primary-color-pico-pink;
+                }
+                &:hover {
+                    @media screen and (min-width: 1366px) {
+                        & > a {
+                            color: $support-color-pure-white;
+                        }
+                    }
+                }
+            }
+            &:hover,
+            &:active,
+            &:visited,
+            &:focus {
+                border: none;
+                outline: none;
+            }
+        }
+        & a {
+            width: 100%;
+            display: block;
+            text-decoration: none;
+            text-transform: uppercase;
+        	font-family: Raleway-SemiBold;
+            font-weight: 600;
+            color: $primary-color-imperial-primer;
+            font-size: 14px;
+            line-height: 14px;
+            letter-spacing: 1.25px;
+            padding: 14px 0;
+            @media screen and (min-width: 1366px) {
+                display: table;
+                margin: auto 0;
+                padding: 3.5rem 0 3.4rem;
+            }
+        }
+    }
+}
+
+li.dropdown-second-level {
+    &:hover {
+        @media screen and (min-width: 1366px) {
+            background-color: $support-color-light-blue-ballerina !important;
+            background-image: url(images/icons/up-arrow-black.svg) !important;
+        }
+    }
+}
+
+.olly-olly-realtor-theme-header__nav-list li.dropdown-second-level:hover a {
+    @media screen and (min-width: 1366px) {
+        color: $primary-color-imperial-primer !important;
+    }
+}
+
+.olly-olly-realtor-theme-header__nav-list li.dropdown-second-level:hover ul.sub-menu {
+    @media screen and (min-width: 1366px) {
+        top: 0 !important;
+        left: 100% !important;
+    }
+}

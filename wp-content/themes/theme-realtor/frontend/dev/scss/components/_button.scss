@@ -1,0 +1,190 @@
+.button {
+    padding: 1em;
+    cursor: pointer;
+    border: 2px solid $support-color-silver;
+    background-color: transparent;
+    border-radius: 4px;
+    font-family: Raleway-SemiBold;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.25px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all ease-in-out 0.1s;
+    &__outline-hamburguer {
+        width: 48px;
+        height: 48px;
+        &:active,
+        &:visited,
+        &:focus {
+            outline: none; 
+        }
+        &.disabled {
+            background-image: url('images/icons/hamburguer-disabled.svg');
+            cursor: not-allowed;
+            &:hover,
+            &:active,
+            &:visited,
+            &:focus {
+                border: 2px solid $support-color-silver;
+                background-color: $support-color-pure-white;
+                background-image: url('images/icons/hamburguer-disabled.svg');
+            }
+        }
+        &:hover &-icon {
+            fill: $support-color-pure-white;
+        }
+        &:active &-icon,
+        &:visited &-icon,
+        &:focus &-icon {
+            fill: $support-color-pure-white;
+        }
+    }
+    &__hamburguer {
+        width: 32px;
+        height: 32px;
+        border: none;
+        padding: 0 !important;
+        @media screen and (min-width: 1366px) {
+            display: none;
+        }
+        &:hover,
+        &:active,
+        &:focus {
+            outline: none;
+        }
+    }
+    &__outline {
+        width: 100%;
+        padding: 1em;
+        &:focus,
+        &:active {
+            outline: none; 
+            color: $support-color-pure-white !important;
+        }
+        &:visited {
+            outline: none; 
+            color: $support-color-pure-white;  
+        }
+        &:hover {
+            color: $support-color-pure-white !important;
+        }
+        &.disabled {
+            &:hover,
+            &:active,
+            &:visited,
+            &:focus {
+                background-color: $support-color-pure-white;
+                border: 2px solid  $support-color-silver;
+                color:  $support-color-silver;
+            }
+            cursor: not-allowed;
+            border: 2px solid  $support-color-silver;
+            color:  $support-color-silver;
+            background-color: $support-color-pure-white;
+        }
+
+    } 
+    &__outline--small {
+        font-size: 12px;
+        text-align: center;
+        line-height: 12px;
+        letter-spacing: 0.25px;
+        padding: 1em 0.8em;
+        min-width: 163px;
+        min-height: 36px;
+        max-height: 36px;
+    }
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & span {
+            display: block;
+            margin-left: 6px;
+            background: {
+                repeat: no-repeat;
+                size: 100%;
+                position: center;
+            };           
+        }
+        &:hover span,
+        &:active span,
+        &:visited span,
+        &:focus span {
+            color: $support-color-pure-white;
+        }
+    }
+    &__outline--right-arrow {
+        & span {
+            width: 20px;
+            height: 14px;
+        }
+        &:active &-icon,
+        &:focus &-icon {
+            fill: $support-color-pure-white !important;
+        }
+        &:visited &-icon {
+            fill: $support-color-pure-white;
+        }
+        &:hover &-icon {
+            fill: $support-color-pure-white !important;
+        }
+
+    }
+    &__filled {
+        width: 100%;
+        padding: 1em 6em !important;
+        color: $support-color-pure-white !important;
+        min-height: 48px;
+        max-height: 48px;
+        &:active,
+        &:visited,
+        &:focus {
+            outline: none; 
+            color: $support-color-pure-white !important; 
+        }
+        &.disabled {
+            cursor: not-allowed;
+            border: 2px solid $support-color-silver;
+            background-color: $support-color-silver;
+            color: $primary-color-concrete;
+        }
+    }
+    &__filled--search {
+        & span {
+            width: 16px;
+            height: 16px;
+            background-image: url('images/icons/search.svg');
+        }
+        &.disabled span {
+            background-image: url('images/icons/search-disabled.svg');
+        }
+    }  
+    &__text {
+        width: 100%;
+        padding: 0.3em 0.5em;
+        border: 2px solid transparent;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 1px;
+        transition: all ease-in-out 0.2s;
+        &:focus,
+        &:active {
+            color: $support-color-pure-white !important;
+            outline: none;
+        }
+        &:visited {
+            color: $support-color-pure-white;
+            outline: none;
+        }
+        &:hover {
+            color: $support-color-pure-white !important;
+        }
+       
+    }   
+    &__text--grey {
+        color: $primary-color-concrete;
+    }
+}

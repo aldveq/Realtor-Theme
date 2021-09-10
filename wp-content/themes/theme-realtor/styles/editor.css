@@ -1,0 +1,30 @@
+.wp-block {
+    max-width: 1440px;
+}
+
+.block-editor-writing-flow {
+    padding-left: 3rem;
+}
+
+/* Resetting some of the component styles in the editor */
+
+@media screen and (min-width: 1366px) {
+    .brand-section {
+        display: block;
+    }
+    .brand-section img {
+        max-width: 280px !important;
+    }
+}
+
+.hero-image-section h5 {
+    color: #fff !important;
+}
+
+.areas-we-serve__map-container,
+.contact-container__map {
+    background-image: url('../images/map-default-image.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

@@ -1,0 +1,35 @@
+.areas-we-serve {
+    padding: 20px 0;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    & .container {
+        order: 1;
+    }
+    &__button-container {
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+    }
+    &__buton {
+        margin-bottom: 30px;
+    }
+    &__map-container {
+        width: 100%;
+        display: none;
+        @media screen and (min-width: 768px) {
+            display: block;
+            height: 430px;
+        }
+    }
+    &__map {
+        @media screen and (min-width: 768px) {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

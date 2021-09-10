@@ -1,0 +1,77 @@
+.olly-olly-hero-video-container {
+    overflow: hidden;
+    background: {
+        repeat: no-repeat;
+        size: cover;
+        position: center;
+    }
+    @media screen and (min-width: 1367px) {
+        background: none !important;
+    }
+    &::before {
+        z-index: 100;
+    }
+    &__header {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 500;
+    }
+    &__body {
+        z-index: 100;
+    }
+    &__video-foreground {
+        position: relative;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        @media screen and (max-width: 1366px) {
+            display: none;
+        }
+    }
+    &__video-foreground iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        @media screen and (min-width: 1200px) {
+            top: -7%;
+        }
+        @media screen and (min-width: 1366px) {
+            top: 0;
+        }
+        @media screen and (min-width: 1440px) {
+            top: -5.10%;
+        }
+        @media screen and (min-width: 1920px) {
+            top: -9%;
+        }
+        @media screen and (min-width: 2560px) {
+            top: -20%;
+        }
+    }
+}
+
+ul.olly-olly-hero-video-container__nav-list li.dropdown-second-level:hover {
+    @media screen and (min-width: 1366px) {
+        background-image: url(images/icons/up-arrow-white.svg) !important;
+    }
+    & a {
+        @media screen and (min-width: 1366px) {
+            color: $support-color-pure-white !important;
+        }
+    } 
+}
+
+.ar-4-by-3 {
+    padding-top: 75%; /* 4:3 Aspect Ratio */
+}
+
+.ar-16-by-9 {
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}

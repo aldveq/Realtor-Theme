@@ -1,0 +1,83 @@
+.about-us-profile-container {
+    @media screen and (min-width: 1366px) {
+        padding: 2rem 0;
+    }
+    & .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @media screen and (min-width: 1024px) {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            grid-template-rows: 50px 1fr;
+            gap: 10px;
+
+            justify-items: start;
+            align-items: start;
+        }
+    }
+    &__title {
+        font-family: Raleway-Light;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 41px;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: -1.5px;
+        color: $primary-color-imperial-primer;
+        @media screen and (min-width: 1024px) {
+            text-align: left;
+            margin: 0 !important;
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+    }
+    &__image-profile {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+        @media screen and (min-width: 1024px) {
+            width: 282px;
+            height: 282px;
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+        @media screen and (min-width: 1200px) {
+            width: 300px;
+            height: 300px;
+        }
+    }
+    &__desc-container {
+        @media screen and (min-width: 1024px) {
+            grid-column: 2 / 3;
+            grid-row: 1 / span 2;
+        }
+        & > p {
+            font-family: Lato-Regular;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 175%;
+            letter-spacing: 0.5px;
+            color: #929292;
+        }
+        & > ul,
+        & > ol {
+            margin: 0;
+            margin-bottom: 24px;
+            padding-left: 30px;
+            & li {
+                font-family: Lato-Regular;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 175%;
+                letter-spacing: .5px;
+                color: $support-color-asbestos;
+            }
+        }
+    }
+}

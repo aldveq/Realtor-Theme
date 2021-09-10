@@ -1,0 +1,21 @@
+.leaflet-popup {
+    margin-bottom: -10px !important;
+}
+
+.leaflet-popup-content-wrapper, 
+.leaflet-popup-tip {
+    color: $support-color-pure-white !important;
+    cursor: pointer;
+    font-family: Lato-Bold;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+    color: $support-color-pure-white !important;
+}
+
+.leaflet-container a.leaflet-popup-close-button,
+.leaflet-container .leaflet-marker-pane img {
+    display: none !important;
+}

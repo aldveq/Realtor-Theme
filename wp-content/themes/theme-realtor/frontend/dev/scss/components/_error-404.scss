@@ -1,0 +1,80 @@
+.error-404-container {
+    padding: 0 0 40px;
+    @media screen and (min-width: 1200px) {
+        padding: 0 0 60px;
+    }
+    & .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @media screen and (min-width: 992px) {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+        @media screen and (min-width: 1200px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__img {
+        width: 300px;
+        height: 300px;
+        @media screen and (min-width: 992px) {
+            width: 470px;
+            height: 470px;
+        }
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 1rem;
+        }
+    }
+    &__information-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @media screen and (min-width: 992px) {
+            width: 50%;
+            align-items: flex-start;
+        }
+        @media screen and (min-width: 1200px) {
+            width: 40%;
+            max-width: 470px;
+            margin: 0 auto;
+            align-items: center;
+        }
+    }
+    &__title {
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 41px;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: -1.5px;
+        color: $primary-color-imperial-primer;
+        margin: 1rem 0 !important;
+    }
+    &__desc {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 175%;
+        text-align: center;
+        letter-spacing: 0.5px;
+        color: $support-color-asbestos;
+        margin-top: 0 !important;
+        margin-bottom: 32px !important;
+        @media screen and (min-width: 992px) {
+            text-align: left;
+        }
+        @media screen and (min-width: 1200px) {
+            text-align: center;
+        }
+    }
+    &__button {
+        text-align: center;
+        padding: 1em 4em!important;
+    }
+}

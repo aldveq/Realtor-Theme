@@ -1,0 +1,57 @@
+.title-description-cta-container {
+    &__title {
+        font-family: Raleway-Light;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 41px;
+        line-height: 130%;
+        letter-spacing: -1.5px;
+        color: $primary-color-imperial-primer;
+        &.left {
+            text-align: left;
+        }
+        &.center {
+            text-align: center;
+        }
+    }
+    &__desc-container {
+        margin-bottom: 2rem;
+        & > h2 {
+            font-family: Raleway-Light;
+            font-weight: 300;
+            font-style: normal;
+        }
+        & > p {
+            font-family: Lato-Regular;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 175%;
+            letter-spacing: 0.5px;
+            color: $support-color-asbestos;
+        }
+        & > ul,
+        & > ol {
+            margin: 0;
+            margin-bottom: 24px;
+            padding-left: 30px;
+            & > li {
+                font-family: Lato-Regular;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 175%;
+                letter-spacing: 0.5px;
+                color: $support-color-asbestos;
+            }
+        }
+    }
+    &__button-container {
+        & a.button {
+            @media screen and (min-width: 768px) {
+                max-width: 365px;
+                margin-left: auto;
+            }
+        }
+    }
+}

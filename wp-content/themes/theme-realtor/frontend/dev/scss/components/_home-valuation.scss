@@ -1,0 +1,152 @@
+.home-valuation-container {
+    @media screen and (min-width: 768px) {
+        width: 92%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    @media screen and (min-width: 1400px) {
+        max-width: 1380px;
+    }
+    @media screen and (min-width: 1920px) {
+        max-width: 1540px;
+    }
+    &__main-title {
+        width: 100%;
+        font-family: Raleway-Light;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 41px;
+        line-height: 53.3px;
+        text-align: center;
+        letter-spacing: -1.5px;
+        color: $primary-color-imperial-primer;
+    }
+    &__form-container,
+    &__content-container {
+        width: 92%;
+        margin: 0 auto;
+    }
+    &__form-main-container {
+        background-color: $support-color-light-blue-ballerina;
+        margin-bottom: 2rem;
+        @media screen and (min-width: 768px) {
+            width: 50%;
+            margin-bottom: 0;
+        }
+    }
+    &__form-container {
+        padding: 28px 0;
+        @media screen and (min-width: 1024px) {
+            padding: 48px 0 0;
+        }
+        & div.wpcf7 > form {
+            @media screen and (min-width: 1024px) {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 60px) 30px;
+                grid-gap: 40px 24px;
+            }
+            & p {
+                margin-bottom: 45px;
+                &:nth-child(2) {
+                    @media screen and (min-width: 1024px) {
+                        grid-column: 1 / 1;
+                        grid-row: 1 / 2;
+                    }
+                }
+                &:nth-child(3) {
+                    @media screen and (min-width: 1024px) {
+                        grid-column: 2 / 3;
+                        grid-row: 1 / 2;
+                    }
+                }
+                &:nth-child(4) {
+                    @media screen and (min-width: 1024px) {
+                        grid-column: 1 / -1;
+                        grid-row: 2 / 3;
+                    }
+                }
+                &:nth-child(5) {
+                    margin-bottom: 0;
+                    @media screen and (min-width: 1024px) {
+                        grid-column: 2 / 3;
+                        grid-row: 3 / 4;
+                    }
+                }
+            }
+            & label {
+                font-family: Lato-Regular;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 28px;
+                letter-spacing: 0.1px;
+                color: $primary-color-imperial-primer;
+            }
+            & input {
+                margin-bottom: 0 !important;
+                font-family: Lato;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 19.6px;
+                letter-spacing: 0.25px;
+                color: $primary-color-concrete;
+            }
+            & div.wpcf7-response-output {
+                @media screen and (min-width: 1024px) {
+                    grid-column: 1 / -1;
+                    grid-row: 4 / 5;
+                    margin: 0 !important;
+                }
+            }
+        }
+    }
+    &__content-container {
+        @media screen and (min-width: 768px) {
+            width: 50%;
+            padding-left: 24px;
+        }
+        & > p {
+            font-family: Lato-Regular;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 28px;
+            letter-spacing: 0.5px;
+            color: $support-color-asbestos;
+            margin-top: 0;
+        }
+    }
+    &__form-title {
+        font-family: Raleway-Regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 28px;
+        line-height: 36.4px;
+        letter-spacing: 0.25px;
+        color: $primary-color-imperial-primer;
+        text-align: center;
+        @media screen and (min-width: 1024px) {
+            margin-top: 0;
+            margin-bottom: 10px !important;
+        }
+    }
+    &__form-subtitle {
+        font-family: Lato-Regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 175%;
+        text-align: center;
+        letter-spacing: 0.5px;
+        color: $support-color-asbestos;
+        @media screen and (min-width: 1024px) {
+            margin-top: 0;
+            margin-bottom: 16px !important;
+        }
+    }
+}

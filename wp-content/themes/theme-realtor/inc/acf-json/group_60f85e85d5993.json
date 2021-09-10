@@ -1,0 +1,88 @@
+{
+    "key": "group_60f85e85d5993",
+    "title": "realScout component",
+    "fields": [
+        {
+            "key": "field_60f85e9aabfc7",
+            "label": "Block background color",
+            "name": "realscout_block_background_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#fcfbf7"
+        },
+        {
+            "key": "field_60f85f82abfc8",
+            "label": "Button color",
+            "name": "realscout_button_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#f7c45f"
+        },
+        {
+            "key": "field_60f85ff2abfc9",
+            "label": "Button font color",
+            "name": "realscout_button_font_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#fcfbf7"
+        },
+        {
+            "key": "field_60f86022abfca",
+            "label": "Realtor Account",
+            "name": "realscout_realtor_account",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/realscout-form"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1626890612
+}

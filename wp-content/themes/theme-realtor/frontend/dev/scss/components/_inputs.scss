@@ -1,0 +1,49 @@
+.input {
+    width: 100%;
+    min-height: 48px;
+    max-height: 48px;
+    padding: 0.7em 4em 0.7em 1em !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+    color: $primary-color-concrete !important;
+    border: 2px solid $support-color-silver !important;
+    border-radius: 4px !important;
+    margin-bottom: 45px !important;
+    &::placeholder {
+        color: $primary-color-concrete;
+    }
+    &:active,
+    &:focus {
+        color: $primary-color-concrete !important;
+        border: 2px solid $primary-color-concrete !important;
+        outline: none;
+    }
+    &.error {
+        border: 2px solid $support-color-tomato-red;
+        &:active,
+        &:focus {
+            border: 2px solid $support-color-tomato-red !important;
+        }
+    }
+    &__select {
+        appearance: none;
+        background: {
+            image: url('images/icons/down-arrow-red.svg');
+            repeat: no-repeat;
+            size: 12px 7px;
+            position: right .75rem center;
+        };
+        & option {
+            color: $primary-color-imperial-primer;
+            background-color: $support-color-pure-white;
+        }
+    }
+    &--text-area {
+        min-height: 144px;
+        max-height: 144px;
+        resize: none;
+    }
+}

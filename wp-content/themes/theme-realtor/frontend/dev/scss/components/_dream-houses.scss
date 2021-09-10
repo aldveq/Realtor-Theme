@@ -1,0 +1,179 @@
+.dream-houses-container {
+    & .container {
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+    }
+    &__info-container,
+    &__cards-container {
+        @media screen and (min-width: 1200px) {
+            width: 50%;
+        }
+    }
+    &__info-container {
+        @media screen and (min-width: 1200px) {
+            padding-right: 40px;
+        }
+    }
+    &__main-title {
+        font-family: Raleway-Light;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 41px;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: -1.5px;
+        color: $primary-color-imperial-primer;
+        margin: 40px 0 20px 0;
+        @media screen and (min-width: 1200px) {
+            text-align: left;
+            margin: 0 0 20px 0;
+        }
+    }
+    &__main-desc {
+        font-family: Lato-Regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 175%;
+        letter-spacing: 0.5px;
+        color: $support-color-asbestos;
+    }
+    &__button {
+        width: auto !important;
+    }
+    &__card-wrap-inner {
+        height: 100% !important;
+        @media screen and (min-width: 480px) {
+            width: 100% !important;
+        }
+        @media screen and (min-width: 1024px) {
+            padding: 12px 12px 12px 0 !important;
+        }
+    }
+    &__flexible {
+        & > p {
+            margin-bottom: 0.5rem !important;
+        }
+    }
+    &__navigation-main-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media screen and (min-width: 1200px) {
+            justify-content: flex-end;
+        }
+        &.hide-on-desktop {
+            @media screen and (min-width: 768px) {
+                display: none !important;
+            }
+        }
+    }
+    &__navigation-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.featured-services-swiper-wrapper {
+    margin-bottom: 60px;
+    height: auto !important;
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 54px;
+    }
+}
+
+.featured-services-swiper-slide {
+    height: auto !important;
+}
+
+.featured-services-swiper-button-next,
+.featured-services-swiper-button-prev {
+    position: initial !important;
+    width: 24px !important;
+    height: 24px !important;
+    margin: 0 16px;
+    border: 2px solid $support-color-silver;
+    border-radius: 4px;
+    padding: 20px;
+    color: $primary-color-pico-pink !important;
+    @media screen and (min-width: 1200px) {
+        margin: 0 0 0 16px;
+    }
+    &::after {
+        font-size: 18px !important;
+        font-weight: bold !important;
+    }
+}
+
+.card__wrap--outer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    @media screen and (min-width: 480px) {
+        justify-content: space-around;
+    }
+    @media screen and (min-width: 1024px) {
+        justify-content: space-between;
+    }
+}
+
+.card__wrap--inner {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 12px 0;
+    @media screen and (min-width: 480px) {
+        width: 42%;
+    }
+    @media screen and (min-width: 1024px) {
+        padding: 12px;
+        width: 33.33%;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: none !important;
+    &__image {
+        width: 100%;
+        display: block;
+        min-height: 220px;
+        max-height: 220px;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 8px;
+        @media screen and (min-width: 1200px) {
+            min-height: 180px;
+            max-height: 180px;
+        }
+    }
+    &__item {
+        padding: 4px;
+    }
+    &__flexible {
+        width: 100%;
+        flex-grow: 1;
+        & p {
+            font-family: Lato-Bold;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 130%;
+            letter-spacing: 0.15px;
+            color: $primary-color-imperial-primer;
+        }
+    }
+    &__button {
+        font-size: 12px !important;
+    }
+    &__footer {
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,155 @@
+{
+    "key": "group_60d4f7345c099",
+    "title": "Home Hero Settings",
+    "fields": [
+        {
+            "key": "field_60d4f7c954177",
+            "label": "Is Hero Feature Enabled?",
+            "name": "home_hero_settings_is_hero_feature_enabled",
+            "type": "button_group",
+            "instructions": "If the URL of the video is available and there is an image available as well, the hero section with the video will be displayed. <\/br> The image will be displayed on the mobile and tablet version of the site.\r\n<\/br>\r\n<\/br>\r\nIf only the image is available, the hero section will be displayed with only the image as the background.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "yes": "Yes",
+                "no": "No"
+            },
+            "allow_null": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_60d4f93d627d2",
+            "label": "Video URL",
+            "name": "home_hero_settings_video_url",
+            "type": "text",
+            "instructions": "This could be a YouTube or Vimeo video. <\/br>\r\nYouTube video URL sample: https:\/\/www.youtube.com\/embed\/video_id <\/br>\r\nVimeo video URL sample: https:\/\/player.vimeo.com\/video\/video_id <\/br>\r\nThe aspect ratio of the video should be 16:9 (1920 x 1080 pixels)",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60d4f7c954177",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_60d4fd20627d3",
+            "label": "Image",
+            "name": "home_hero_settings_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60d4f7c954177",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_60d609c88ca26",
+            "label": "Title",
+            "name": "home_hero_settings_title",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60d4f7c954177",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_60d609ee8ca27",
+            "label": "Link",
+            "name": "home_hero_settings_link",
+            "type": "link",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60d4f7c954177",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "home-hero-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1626450148
+}

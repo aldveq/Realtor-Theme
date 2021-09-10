@@ -1,0 +1,236 @@
+.free-consultation-form {
+    background-color: $support-color-light-blue-ballerina;
+    padding: 20px 0;
+    @media screen and (min-width: 1200px) {
+        padding: 30px 0 50px;
+    }
+    & .container {
+        @media screen and (min-width: 992px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+        }
+    }
+    &__info-container, 
+    &__form-container {
+        @media screen and (min-width: 992px) {
+            width: 50%;
+        }
+    }
+    &__info-container {
+        & > p {
+            font-family: Lato-Regular;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 175%;
+            letter-spacing: 0.5px;
+            color: $support-color-asbestos !important;
+            margin-top: 0 !important;
+        }
+        & > ul,
+        & > ol {
+            margin: 0;
+            margin-bottom: 24px;
+            padding-left: 30px;
+            & li {
+                font-family: Lato-Regular;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 175%;
+                letter-spacing: .5px;
+                color: $support-color-asbestos;
+            }
+        }
+        @media screen and (min-width: 992px) {
+            padding-right: 4rem;
+        }
+        @media screen and (min-width: 1440px) {
+            padding-right: 10rem;
+        }
+    }
+    &__form-container {
+        & p:empty {
+            display: none !important;
+        }
+        & form.wpcf7-form {
+            @media screen and (min-width: 1200px) {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 48px) 144px 48px;
+                gap: 52px 24px;
+                margin-bottom: 0 !important;
+            }
+            & br {
+                display: none !important;
+            }
+        }
+        & form.wpcf7-form p {
+            margin: 0 0 30px !important;
+            @media screen and (min-width: 1200px) {
+                margin: 0 !important;
+            }
+            &:nth-child(2) {
+                @media screen and (min-width: 1200px) {
+                    grid-column: 1 / 2;
+                    grid-row: 1 / 2;
+                }
+            }
+            &:nth-child(3) {
+                @media screen and (min-width: 1200px) {
+                    grid-column: 2 / 3;
+                    grid-row: 1 / 2;
+                }
+            }
+            &:nth-child(4) {
+                @media screen and (min-width: 1200px) {
+                    grid-column: 1 / 2;
+                    grid-row: 2 / 3;
+                }
+            }
+            &:nth-child(5) {
+                @media screen and (min-width: 1200px) {
+                    grid-column: 2 / 3;
+                    grid-row: 2 / 3;
+                }
+            }
+            &:nth-child(6) {
+                @media screen and (min-width: 1200px) {
+                    grid-column: 1 / span 2;
+                    grid-row: 3 / 4;
+                }
+            }
+            &:nth-child(7) {
+                margin-bottom: 0 !important;
+                @media screen and (min-width: 1200px) {
+                    grid-column: 2 / -1;
+                    grid-row: 4 / 5;
+                }
+            }
+        }
+        & form.wpcf7-form p label {
+            font-family: Lato-Bold;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 130%;
+            letter-spacing: 0.1px;
+            color: $primary-color-imperial-primer;
+        }
+        & form.wpcf7-form p label span input,
+        & form.wpcf7-form p label span textarea {
+            margin-bottom: 0 !important;
+            font-family: Lato-Regular;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        & form.wpcf7-form div.wpcf7-response-output {
+            margin: 0 0.5em 1em;
+            padding: .2em 1em;
+            @media screen and (min-width: 1200px) {
+                grid-column: 1 / -1;
+                grid-row: 5 / 6;
+            }
+        }
+
+        & span.FirstName span.wpcf7-not-valid-tip,
+        & span.LastName span.wpcf7-not-valid-tip,
+        & span.Email span.wpcf7-not-valid-tip,
+        & span.PhoneNumber span.wpcf7-not-valid-tip,
+        & span.Message span.wpcf7-not-valid-tip {
+            font-family: Lato-Regular;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 175%;
+            letter-spacing: 0.25px;
+            color: $support-color-tomato-red !important; 
+            padding-left: 1em !important;
+        }
+    }
+    &__title {
+        display: block !important;
+        width: 100% !important;
+        text-align: center;
+        font-family: Raleway-Regular;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 28px !important; 
+        line-height: 130%;
+        letter-spacing: 0.25px;
+        color: $primary-color-imperial-primer;
+    }
+    &__desc {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 175%;
+        letter-spacing: 0.5px;
+        color: $support-color-asbestos;
+    }
+    &__phone-number {
+        color: $primary-color-pico-pink;
+        text-decoration: none;
+        &:hover,
+        &:visited {
+            color: $primary-color-pico-pink;
+        }
+    }
+    &__areas-container {
+        display: flex;
+        flex-wrap: wrap;
+        & > p {
+            display: block;
+            width: 100%;
+            font-family: Lato-Regular;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 175%;
+            letter-spacing: 0.5px;
+            color: $support-color-asbestos !important;
+            margin-top: 0 !important;
+        }
+        & > ul,
+        & > ol {
+            display: block;
+            width: 100%;
+            margin: 0;
+            margin-bottom: 24px;
+            padding-left: 30px;
+            & li {
+                font-family: Lato-Regular;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 175%;
+                letter-spacing: .5px;
+                color: $support-color-asbestos;
+            }
+        }
+        &__desc {
+            width: 100%;
+        }
+    }
+    &__area-list {
+        width: 50% !important; 
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    &__area-item {
+        text-transform: uppercase;
+        color: $primary-color-pico-pink;
+        list-style: none;
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 1px;
+        margin-bottom: 32px !important;
+    }
+}

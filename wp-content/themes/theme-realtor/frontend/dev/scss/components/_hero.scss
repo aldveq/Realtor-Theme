@@ -1,0 +1,79 @@
+$tablet-min-height: 250px;
+$desktop-min-height: 320px; 
+
+.hero-image-section {
+    @media screen and (min-width: 1024px) {
+        min-height: $tablet-min-height;
+        background: {
+            repeat: no-repeat;
+            size: cover;
+            position: center;
+        };
+        margin-bottom: 2rem;
+        position: relative;
+    }
+    @media screen and (min-width: 1366px) {
+        min-height: $desktop-min-height;
+    }
+    @media screen and (max-width: 1023px) {
+        background: none !important;
+    }
+    &::before {
+        @media screen and (min-width: 1024px) {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba($primary-color-imperial-primer, 0.48);
+        }
+    }
+    & .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @media screen and (min-width: 1024px) {
+            position: relative;
+            min-height: $tablet-min-height;
+        }
+        @media screen and (min-width: 1366px) {
+            min-height: $desktop-min-height;
+        }
+    }
+    & h3 {
+    	font-family: Raleway-Regular;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 28.6px;
+        text-align: center;
+        color: $primary-color-imperial-primer;
+        margin: 0 !important;
+        @media screen and (min-width: 1024px) {
+            font-size: 36px;
+            margin-bottom: 10px !important;
+        }
+    }   
+    & p {
+        font-family: Lato-Regular;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 175%;
+        text-align: center;
+        letter-spacing: 0.25px;
+        color: $primary-color-concrete;
+        margin: 0 !important;
+        @media screen and (min-width: 1024px) {
+            font-size: 18px;
+        }
+    }
+    & h3,
+    & p {
+        @media screen and (min-width: 1024px) {
+            color: $support-color-pure-white;
+        }
+    }
+}

@@ -1,0 +1,220 @@
+.testimonials-container {
+    padding-bottom: 48px;
+    &__title {
+        margin: 48px 0;
+        text-align: center;
+        font-family: Raleway-Regular;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 36.4px;
+        letter-spacing: 0.25px;
+        color: $primary-color-imperial-primer;
+        text-transform: capitalize;
+    }
+    &__swiper-container,
+    &__swiper-wrapper {
+        height: auto !important;
+    }
+    &__swiper-container {
+        padding-bottom: 5rem !important;
+        @media screen and (min-width: 1024px) {
+            padding-bottom: 6rem !important;
+        }
+    }
+    &__swiper-slide {
+        height: initial !important;
+    }
+    &__card-wrap-inner {
+        height: 100% !important;
+        @media screen and (min-width: 480px) {
+            width: 100% !important;
+        }
+        @media screen and (min-width: 1024px) {
+            width: 100% !important;
+        }
+    }
+    &__quote {
+        width: 48px;
+        height: 30px;
+        fill: $primary-color-pico-pink; 
+    }
+    &__swiper-pagination {
+        & span.swiper-pagination-bullet {
+            background: none;
+            border: 1px solid $primary-color-imperial-primer;
+        }
+        & span.swiper-pagination-bullet-active {
+            background: $primary-color-imperial-primer;
+        }
+        &.swiper-navigation-desktop-render {
+            @media screen and (min-width: 1024px) {
+                display: none;
+            }
+        }
+    }
+    &__rating-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__rating-star {
+        font-size: 22px;
+        color: lighten($primary-color-pico-pink, 25);
+        &.active {
+            color: $primary-color-pico-pink;
+        }
+    }
+    &__desc {
+        font-family: Lato-Regular !important;
+        font-weight: 400 !important;
+        font-style: normal !important;
+        font-size: 16px !important;
+        line-height: 175% !important;
+        letter-spacing: 0.5px !important;
+        color: $support-color-asbestos !important;
+        margin-bottom: 0 !important;
+    }
+    &__card-footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__source-text {
+        font-family: Lato-Regular;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 175%;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: $primary-color-imperial-primer;
+    }
+    &__name {
+        font-family: Lato-Bold;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 130%;
+        letter-spacing: 0.15px;
+        color: $primary-color-pico-pink;
+        margin-bottom: 1rem;
+    }
+    &__card-button {
+        width: 36% !important;
+        min-width: initial !important;
+        padding: 0 !important;
+    }
+}
+
+.testimonial-modal-window-wrapper {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    opacity: 0;
+    background-color: rgba($primary-color-imperial-primer, 0.52);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in-out 0.1s;
+    &.active {
+        opacity: 1;
+        z-index: 7000;
+    }
+    &__container {
+        width: 90%;
+        margin: 0 auto;
+        max-width: 1024px;
+        background-color: $support-color-pure-white;
+        border-radius: 4px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__close-icon-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 1rem;
+        & span {
+            width: 36px;
+            height: 36px;
+            font-size: 34px;
+            color: $primary-color-pico-pink;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:active {
+                transform: scale(0.95);
+            }
+        }
+    }
+    &__rating-container,
+    &__quote {
+        margin-bottom: 2rem !important;
+    }
+    &__rating-container {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+    &__quote {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+    &__source {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 175%;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: $primary-color-imperial-primer;
+        text-align: center;
+    }
+    &__author {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 130%;
+        letter-spacing: 0.15px;
+        color: $testimonial-color-author-name;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    &__content{
+        min-height: 400px;
+        max-height: 400px;
+        overflow-y: auto;
+        margin-bottom: 1rem;
+        @media screen and (min-width: 1024px) {
+            min-height: initial;
+            max-height: initial;
+            margin-bottom: 2rem;
+        }
+        & > * {
+            color: $support-color-asbestos;
+            margin-top: 0;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__button {
+        width: 20%;
+        margin: 0 auto;
+    }
+}

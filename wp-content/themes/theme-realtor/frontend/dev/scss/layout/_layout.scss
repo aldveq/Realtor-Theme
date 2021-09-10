@@ -1,0 +1,36 @@
+body {
+    overflow-x: hidden;
+    padding-top: 50px;
+    @media screen and (min-width: 1366px) {
+        padding-top: 140px;
+    }
+    @media screen and (min-width: 1412px) {
+        padding-top: 126px;
+    }
+    &.disable-scrolling {
+        height: 100%;
+        overflow-y: hidden;
+    }
+}
+
+.container {
+    width: 92%;
+    margin: 0 auto;
+    flex-basis: initial !important;
+    flex-grow: initial !important;
+    @media screen and (min-width: 1400px) {
+        max-width: 1380px;
+    }
+    @media screen and (min-width: 1920px) {
+        max-width: 1540px;
+    }
+}
+
+.container-separation-y {
+    padding: 2rem 0;
+}
+
+
+.page {
+    margin: 0 !important;
+}

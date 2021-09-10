@@ -1,0 +1,33 @@
+{
+    "name": "shepard-realtors",
+    "version": "1.0.0",
+    "description": "Find your perfect lakeside retreat, today!",
+    "main": "gulpfile.babel.js",
+    "scripts": {
+        "start": "gulp"
+    },
+    "keywords": [],
+    "author": "Aldo Paz Velásquez",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.3.4",
+        "@babel/preset-env": "^7.3.4",
+        "@babel/register": "^7.0.0",
+        "babelify": "^10.0.0",
+        "browser-sync": "^2.26.3",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^7.0.1",
+        "gulp-babel": "^8.0.0",
+        "gulp-browserify": "^0.5.1",
+        "gulp-clean-css": "^4.0.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-pug": "^4.0.1",
+        "gulp-sass": "^4.0.2",
+        "gulp-streamify": "^1.0.2",
+        "gulp-uglify": "^3.0.2"
+    },
+    "dependencies": {
+        "cleave.js": "^1.6.0",
+        "swiper": "^6.5.7"
+    }
+}

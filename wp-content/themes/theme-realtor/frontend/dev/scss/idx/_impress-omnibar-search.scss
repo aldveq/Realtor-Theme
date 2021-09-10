@@ -1,0 +1,227 @@
+.impress-omnibar-search-container {
+    & form.idx-omnibar-form {
+        padding: 0;
+        @media screen and (min-width: 768px) {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 48px);
+            gap: 20px;
+        }
+    }
+    & div.awesomplete,
+    &  button.button__outline-hamburguer {
+        display: inline-block !important;
+    }
+    & div.awesomplete {
+        width: 78% !important;
+        @media screen and (min-width: 768px) {
+            width: 100% !important;
+            grid-column: 1 / span 3;
+        }
+    }
+    &  button.button__outline-hamburguer {
+        width: 17% !important;
+        margin-top: 0 !important;
+        margin-left: 10px;
+        min-height: 48px !important;
+        @media screen and (min-width: 360px) {
+            margin-left: 12px;
+        }
+        @media screen and (min-width: 380px) {
+            margin-left: 13px;
+        }
+        @media screen and (min-width: 412px) {
+            margin-left: 14px;
+        }
+        @media screen and (min-width: 576px) {
+            margin-left: 23px;
+        }
+        @media screen and (min-width: 768px) {
+            display: none !important;
+        }
+    }
+    & label {
+        display: none !important;
+    }
+    & .idx-omnibar-input,
+    & .idx-omnibar-min-price,
+    & .idx-omnibar-price,
+    & .idx-omnibar-bed,
+    & .idx-omnibar-bath {
+        width: 100%;
+        min-height: 48px;
+        max-height: 48px;
+        padding: 0.7em 1em;
+        margin-right: 0 !important;
+        font-style: normal;
+        font-weight: 400;
+        font-family: Lato-Regular;
+        font-size: 14px;
+        line-height: 140%;
+        letter-spacing: 0.25px;
+        color: $primary-color-concrete;
+        border: 2px solid $support-color-silver;
+        border-radius: 4px;
+        &::placeholder {
+            color: $primary-color-concrete;
+        }
+        &:active,
+        &:focus {
+            color: $primary-color-concrete !important;
+            border: 2px solid $primary-color-concrete !important;
+            outline: none;
+        }
+    }
+    & .idx-omnibar-input,
+    & .idx-omnibar-min-price,
+    & .idx-omnibar-price,
+    & .idx-omnibar-bed,
+    & .idx-omnibar-bath {
+        &.mb-1 {
+            margin-bottom: 1rem !important;
+        }
+    }
+    & .idx-omnibar-min-price,
+    & .idx-omnibar-price,
+    & .idx-omnibar-bed,
+    & .idx-omnibar-bath {
+        display: none;
+        @media screen and (min-width: 768px) {
+            display: block;
+        }
+        &.active {
+            display: block;
+        }
+    }
+    & button.idx-omnibar-extra-button {
+        padding: 1em;
+        margin-top: 0 !important;
+        cursor: pointer;
+        border: 2px solid $support-color-silver;
+        background-color: transparent;
+        border-radius: 4px;
+        font-family: Raleway-SemiBold;
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: 0.25px;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: all ease-in-out 0.1s;
+        width: 100%;
+        padding: 1em 6em;
+        color: $support-color-pure-white;
+        min-height: 48px;
+        max-height: 48px;
+        position: relative;
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &:active,
+        &:visited,
+        &:focus {
+            outline: none; 
+            color: $support-color-pure-white; 
+        }
+        &.disabled {
+            cursor: not-allowed;
+            border: 2px solid $support-color-silver;
+            background-color: $support-color-silver;
+            color: $primary-color-concrete;
+        }
+        & span {
+            margin-left: 0;
+            margin-right: 20px;
+            position: relative;
+            font-family: Raleway-SemiBold;
+            font-weight: 700;
+            font-style: normal;
+            @media screen and (min-width: 768px) {
+                display: none;
+            }
+            @media screen and (min-width: 1200px) {
+                display: block;
+            }
+            &::after {
+                content: '';
+                width: 16px;
+                height: 16px;
+                background: {
+                    image: url('images/icons/search.svg');
+                    size: cover;
+                    position: center;
+                    repeat: no-repeat;
+                }
+                position: absolute;
+                top: 50%;
+                right: -20px;
+                transform: translateY(-50%);
+            }
+        }
+        // &.disabled span {
+        //     background-image: url('images/icons/search-disabled.svg');
+        // }
+        & i {
+            display: none;
+        }
+        @media screen and (min-width: 768px) {
+            grid-column: 4 / 5;
+            grid-row: 1 / 2;
+        }
+        &::after {
+            @media screen and (min-width: 768px) {
+                content: '';
+                width: 16px;
+                height: 16px;
+                background: {
+                    image: url('images/icons/search.svg');
+                    size: cover;
+                    position: center;
+                    repeat: no-repeat;
+                }
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            @media screen and (min-width: 1200px) {
+                display: none;
+            }
+        }
+    }
+    & .idx-omnibar-extra {
+        @media screen and (min-width: 768px) {
+            width: 100% !important;
+        }
+    }
+    & div.idx-omnibar-bath-container,
+    & div.idx-omnibar-bed-container,
+    & div.idx-omnibar-min-price-container,
+    & div.idx-omnibar-max-price-container {
+        @media screen and (min-width: 768px) {
+            grid-row: 2 / 3;
+        }
+    }
+    & div.idx-omnibar-bath-container {
+        @media screen and (min-width: 768px) {
+            grid-column: 1 / 2;
+        }
+    }
+    & div.idx-omnibar-bed-container {
+        @media screen and (min-width: 768px) {
+            grid-column: 2 / 3;
+        }
+    }
+    & div.idx-omnibar-min-price-container {
+        @media screen and (min-width: 768px) {
+            grid-column: 3 / 4;
+        }
+    }
+    & div.idx-omnibar-max-price-container {
+        @media screen and (min-width: 768px) {
+            grid-column: 4 / 5;
+        }
+    }
+
+}

@@ -1,0 +1,281 @@
+.olly-olly-hero-image-container-body {
+    padding-top: 0;
+}
+
+.olly-olly-hero-image-container {
+    height: 570px;
+    max-height: 570px;
+    background: {
+        repeat: no-repeat;
+        size: cover;
+        position: center;
+    }
+    position: relative;
+    @media screen and (min-width: 1440px) {
+        height: 770px;
+        max-height: 770px;
+    }
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(33, 11, 44, 0.42), rgba(33, 11, 44, 0.42));
+        background-blend-mode: darken, normal;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &__header {
+        position: relative;
+    }
+    &__body {
+        width: 100%;
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        & div.container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            @media screen and (min-width: 576px) {
+                max-width: 500px;
+            }
+            @media screen and (min-width: 768px) {
+                max-width: 650px;
+            }
+        }
+    }
+    &__body-title {
+        font-family: Raleway-Regular;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 36px;
+        line-height: 46.8px;
+        text-align: center;
+        letter-spacing: -1.5px;
+        color: $support-color-pure-white;
+        text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.18);
+    }
+    &__body-button {
+        font-family: Raleway-Regular;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 1.25px;
+        text-transform: uppercase;
+        text-align: center;
+        background-color: $support-color-pure-white !important;
+        border: 2px solid $support-color-pure-white !important;
+        padding: 1em 3em !important;
+        @media screen and (min-width: 576px) {
+            max-width: fit-content;
+        }
+        &:hover {
+            border: 2px solid darken($support-color-pure-white, 5) !important;
+            background-color: darken($support-color-pure-white, 5) !important;
+        }
+    }
+    &__theme-header {
+        position: relative;
+        top: initial;
+        left: initial;
+        z-index: 1200;
+        background-color: rgba($black-color, 0.14);
+        @media screen and (min-width: 1024px) {
+            background-color: transparent;
+        }
+        @media screen and (min-width: 1366px) {
+            padding: 30px 0;
+        }
+        &.active-mobile-menu {
+            background-color: rgba($black-color, 0.95);
+        }
+        &.fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba($black-color, 0.95);
+        }
+    }
+    &__hamburger-inner {
+        background-color: $support-color-pure-white;
+        &::before,
+        &::after {
+            background-color: $support-color-pure-white;
+        }
+    }
+    &__social-networks-container {
+        padding: 20px 0 10px;
+        background-color: rgba($black-color, 0.14);
+        @media screen and (min-width: 1024px) {
+            padding: 10px 0;
+        }
+    }
+    &__logo-link {
+        display: flex;
+    }
+    &__logo {
+        width: 90%;
+        height: 70px;
+        padding: 10px 0;
+        @media screen and (min-width: 1024px) {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__cta-phone-number-mobile {
+        display: none;
+    }
+    &__cta-link-desktop {
+        display: none;
+    }
+    &__social-networks-nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        @media screen and (min-width: 1024px) {
+            justify-content: flex-end;
+        }
+        & li {
+            list-style: none;
+            @media screen and (min-width: 1024px) {
+                margin-left: 56px;
+            }
+        }
+    }
+    &__nav-list {
+        & li {
+            margin: 18px 0;
+            &:hover {
+                @media screen and (min-width: 1366px) {
+                    background-color: transparent;
+                }
+            }
+            &:last-child {
+                @media screen and (min-width: 1366px) {
+                    padding-right: 0 !important;
+                }
+            }
+            &:last-child a {
+                @media screen and (min-width: 1366px) {
+                    padding: 0 !important;
+                }
+            }
+        }
+        & li ul.sub-menu {
+            @media screen and (min-width: 1366px) {
+                background-color: rgba($black-color, 0.82);
+                border-radius: 4px !important;
+            }
+            &.show {
+                padding-bottom: 0;
+                border-top: 2px solid $support-color-pure-white;
+            }
+        }
+        & li a {
+            color: $support-color-pure-white;
+            position: relative;
+            padding: 5px 0;
+            @media screen and (min-width: 1366px) {
+                padding: 0;
+            }
+            &::before {
+                @media screen and (min-width: 1366px) {
+                    content: '';
+                    width: 0;
+                    height: 2px;
+                    position: absolute;
+                    bottom: -10px;
+                    left: 0;
+                    background-color: $support-color-pure-white;
+                    transition: all ease-in-out 0.3s;
+                }
+            }
+            &:hover::before {
+                @media screen and (min-width: 1366px) {
+                    width: 100%;
+                }
+            }
+        }
+        li.menu-item-has-children {
+            background-image: url(images/icons/down-arrow-white.svg);
+            background-position: right .75rem top 0.4rem;
+            @media screen and (min-width: 1366px) {
+                background-position: right .75rem center;
+            }
+            &.show {
+                background-image: url(images/icons/up-arrow-white.svg);
+            }
+            &:hover {
+                background-color: transparent;
+            }
+        }
+        & li ul.sub-menu li a {
+            color: $support-color-pure-white !important;
+            @media screen and (min-width: 1366px) {
+                padding: 1.5rem 1.5rem;
+            }
+            &::before {
+                @media screen and (min-width: 1366px) {
+                    bottom: 0;
+                }
+            }
+        }
+        & li ul.sub-menu li {
+            &:hover {
+                @media screen and (min-width: 1366px) {
+                    background-color: transparent;
+                }
+            }
+            &:last-child a {
+                @media screen and (min-width: 1366px) {
+                    padding: 1.5rem 1.5rem !important;
+                }
+            }
+            &.current-menu-item {
+                @media screen and (min-width: 1366px) {
+                    background-color: transparent;
+                }
+            }
+        }
+        & li.current-menu-item a {
+            color: $support-color-pure-white !important;
+            &::before {
+                content: '';
+                width: 100%;
+                height: 2px;
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+                background-color: $support-color-pure-white;
+                transition: all ease-in-out 0.3s;
+            }
+        }
+        & li.current-menu-parent.menu-item-has-children > a {
+            color: $support-color-pure-white;
+            &::before {
+                @media screen and (min-width: 1366px) {
+                    width: 100%;
+                    background-color: $support-color-pure-white;
+                }
+            }
+        }
+    }
+}
+
+ul.olly-olly-hero-image-container__nav-list li.dropdown-second-level:hover {
+    @media screen and (min-width: 1366px) {
+        background-image: url(images/icons/up-arrow-white.svg) !important;
+    }
+    & a {
+        @media screen and (min-width: 1366px) {
+            color: $support-color-pure-white !important;
+        }
+    } 
+}

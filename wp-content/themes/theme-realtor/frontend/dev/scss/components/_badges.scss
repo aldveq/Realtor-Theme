@@ -1,0 +1,44 @@
+.badges-container {
+    &__title {
+        margin: 48px 0 0;
+        text-align: center;
+        font-family: Raleway-Regular;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 36.4px;
+        letter-spacing: .25px;
+        color: $primary-color-imperial-primer;
+        text-transform: capitalize;
+        @media screen and (min-width: 1024px) {
+            margin: 48px 0 20px;
+        }
+    }
+    &__swiper-container {
+        @media screen and (min-width: 1024px) {
+            padding-bottom: 26px !important;
+        }
+    }
+    &__swiper-pagination {
+        @media screen and (min-width: 768px) {
+            bottom: -4px !important;
+        }
+        & span.swiper-pagination-bullet {
+            border: 1px solid $primary-color-imperial-primer;
+            background: 0 0;
+        }
+        & span.swiper-pagination-bullet-active {
+            background: $primary-color-imperial-primer;
+        }
+        &.badges-pagination-desktop-render {
+            @media screen and (min-width: 1024px) {
+                display: none
+            }
+        }
+    }
+    & .badges-center-items{
+        @media screen and (min-width: 1024px) {
+            justify-content: center;
+        }
+    }
+}
